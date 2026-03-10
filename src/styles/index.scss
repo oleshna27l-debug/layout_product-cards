@@ -1,3 +1,152 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  width: 200px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 16px 16px;
+  background-color: #fff;
+  padding-bottom: 16px;
+  border: 1px solid #f3f3f3;
+
+  &__code-link {
+    text-decoration: none;
+  }
+
+  &__image img {
+    width: 160px;
+    height: 134px;
+    display: block;
+    object-fit: contain;
+  }
+
+  &__title-link {
+    text-decoration: none;
+
+    &:hover {
+      color: #00acdc;
+    }
+  }
+}
+
+.card__button {
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  color: #00acdc;
+  opacity: 1;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+}
+
+.card__button-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1px solid #00acdc;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 166px;
+  height: 40px;
+  margin-top: 16px;
+
+  &:hover {
+    background-color: #00acdc;
+
+    .card__button {
+      color: #fff;
+    }
+  }
+}
+
+.stars {
+  background-color: #fff;
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    border-radius: 0.5px;
+    background-repeat: no-repeat;
+    background-image: url('../images/star.svg');
+    background-position: center;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
+  }
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  color: #000;
+  margin-top: 40px;
+}
+
+.card__code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0%;
+  color: #616070;
+  margin-top: 4px;
+}
+
+.card__rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.card__reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0%;
+  text-align: right;
+  vertical-align: bottom;
+  color: #060b35;
+}
+
+.card__price-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  color: #616070;
+}
+
+.card__price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: right;
+  vertical-align: bottom;
+  color: #060b35;
+}
+
+.card__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
 }
