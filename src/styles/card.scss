@@ -4,11 +4,10 @@
 }
 
 .card {
-  width: $width;
+  width: $width-mobile;
   border-radius: 5px;
   box-sizing: border-box;
   padding: 16px;
-  width: 200px;
   padding-bottom: 16px;
   border: 1px solid #f3f3f3;
 
@@ -56,12 +55,7 @@
 
     &:hover {
       background-color: $background-color-hover-button;
-      color: #fff;
     }
-  }
-
-  &__button {
-    color: $background-color-hover-button;
   }
 
   &__title {
@@ -124,3 +118,4 @@
     margin-top: 24px;
   }
 }
+
